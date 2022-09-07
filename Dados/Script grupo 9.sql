@@ -7,19 +7,17 @@ nome varchar (45),
 cnpj varchar (45),
 email varchar (45),
 check (email like '%@%' and email like '%.com%'),
-senha varchar (45),
-fkFuncionario int,
-foreign key (fkFuncionario) references funcionario (idFuncionario)
+senha varchar (45)
 );
 
 select * from usuario;
 
-create table funcionario (
-idFuncionario int primary key auto_increment,
-funcionario varchar (45)
-);
+-- create table funcionario (
+-- idFuncionario int primary key auto_increment,
+-- funcionario varchar (45)
+-- );
 
-insert into funcionario values
-(null, 'Administrador'),
-(null, 'Usuário');
-select * from funcionario;
+-- insert into funcionario values
+-- (null, 'Administrador'),
+-- (null, 'Usuário');
+-- select * from funcionario;
